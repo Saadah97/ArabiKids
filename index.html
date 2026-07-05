@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arab PRO Kids | Belajar Bahasa Arab Menyeronokkan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+        body { font-family: 'Quicksand', sans-serif; background-color: #f0fdf4; }
+        .islamic-gradient { background: linear-gradient(135deg, #059669, #10b981); }
+        .card { transition: transform 0.3s ease; }
+        .card:hover { transform: scale(1.05); }
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body>
+
+    <nav class="islamic-gradient p-4 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold flex items-center gap-2">
+                <i class="fas fa-mosque"></i> Arab PRO Kids
+            </h1>
+            <div id="user-stats" class="text-sm font-semibold flex gap-4">
+                <span><i class="fas fa-star text-yellow-300"></i> 120 XP</span>
+                <span><i class="fas fa-coins text-yellow-400"></i> 50 Gold</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 py-8">
+        <header class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-emerald-800">Selamat Datang, Adik! 👋</h2>
+            <p class="text-emerald-600">Jom belajar Bahasa Arab hari ini!</p>
+        </header>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="menu-grid">
+            <div class="card bg-white p-6 rounded-3xl shadow-md text-center cursor-pointer border-b-4 border-emerald-500">
+                <div class="text-4xl mb-4 text-emerald-500">📖</div>
+                <h3 class="font-bold text-lg">Hijaiyah</h3>
+            </div>
+            <div class="card bg-white p-6 rounded-3xl shadow-md text-center cursor-pointer border-b-4 border-orange-500">
+                <div class="text-4xl mb-4 text-orange-500">✨</div>
+                <h3 class="font-bold text-lg">Harakat</h3>
+            </div>
+            <div class="card bg-white p-6 rounded-3xl shadow-md text-center cursor-pointer border-b-4 border-blue-500">
+                <div class="text-4xl mb-4 text-blue-500">🍎</div>
+                <h3 class="font-bold text-lg">Perkataan</h3>
+            </div>
+            <div class="card bg-white p-6 rounded-3xl shadow-md text-center cursor-pointer border-b-4 border-purple-500">
+                <div class="text-4xl mb-4 text-purple-500">🎮</div>
+                <h3 class="font-bold text-lg">Permainan</h3>
+            </div>
+        </div>
+
+        <section class="mt-12 bg-white p-8 rounded-3xl shadow-sm border border-emerald-100">
+            <div class="flex items-center gap-4">
+                <div class="text-4xl">🤖</div>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-900">Tanya AI Tutor</h3>
+                    <p class="text-gray-600">Perlukan bantuan? Tulis soalan anda di sini.</p>
+                </div>
+            </div>
+            <div class="mt-4 flex gap-2">
+                <input type="text" placeholder="Contoh: Apa maksud kitab?" class="flex-1 p-4 rounded-full border border-emerald-200 outline-none">
+                <button class="bg-emerald-600 text-white px-8 rounded-full font-bold">Tanya</button>
+            </div>
+        </section>
+    </main>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyAtFzrMWQ70vRCVhoECHxjjY0hP5WXkw74",
+            authDomain: "arab-pro-kids.firebaseapp.com",
+            databaseURL: "https://arab-pro-kids-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "arab-pro-kids",
+            storageBucket: "arab-pro-kids.firebasestorage.app",
+            messagingSenderId: "648161412378",
+            appId: "1:648161412378:web:b37feef60b72ebf1b098a3"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        console.log("Arab PRO Kids Firebase Initialized");
+    </script>
+</body>
+</html>
