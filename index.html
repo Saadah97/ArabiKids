@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArabiKIDS - Belajar Bahasa Arab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f3f4f6; }
+        .emerald-bg { background-color: #22C55E; }
+        .blue-btn { background-color: #3B82F6; }
+        .card { transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Header -->
+    <header class="emerald-bg text-white p-6 rounded-b-3xl shadow-lg text-center">
+        <h1 class="text-3xl font-bold">ArabiKIDS</h1>
+        <p class="text-sm opacity-90">Selamat Datang, Adik!</p>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="max-w-md mx-auto p-4 grid grid-cols-2 gap-4">
+        <div class="col-span-2 bg-white p-6 rounded-2xl shadow-md text-center mb-4">
+            <h2 class="text-xl font-bold text-gray-800">Mari Belajar Hari Ini!</h2>
+            <div class="flex justify-center gap-4 mt-4">
+                <span class="text-yellow-500 font-bold">⭐ 1250 XP</span>
+                <span class="text-blue-500 font-bold">🔥 5 Streak</span>
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="card bg-white p-4 rounded-2xl shadow flex flex-col items-center cursor-pointer">
+            <span class="text-3xl mb-2">📖</span>
+            <span class="font-semibold text-gray-700">Belajar</span>
+        </div>
+        <div class="card bg-white p-4 rounded-2xl shadow flex flex-col items-center cursor-pointer">
+            <span class="text-3xl mb-2">🎮</span>
+            <span class="font-semibold text-gray-700">Permainan</span>
+        </div>
+        <div class="card bg-white p-4 rounded-2xl shadow flex flex-col items-center cursor-pointer">
+            <span class="text-3xl mb-2">🏆</span>
+            <span class="font-semibold text-gray-700">Kuiz</span>
+        </div>
+        <div class="card bg-white p-4 rounded-2xl shadow flex flex-col items-center cursor-pointer">
+            <span class="text-3xl mb-2">📚</span>
+            <span class="font-semibold text-gray-700">Kamus</span>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 w-full bg-white border-t p-4 flex justify-around">
+        <button class="text-green-500 font-bold">🏠</button>
+        <button class="text-gray-400">📚</button>
+        <button class="text-gray-400">🎮</button>
+        <button class="text-gray-400">🏆</button>
+        <button class="text-gray-400">👤</button>
+    </nav>
+
+    <!-- Firebase Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAtFzrMWQ70vRCVhoECHxjjY0hP5WXkw74",
+            authDomain: "arab-pro-kids.firebaseapp.com",
+            databaseURL: "https://arab-pro-kids-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "arab-pro-kids",
+            storageBucket: "arab-pro-kids.firebasestorage.app",
+            messagingSenderId: "648161412378",
+            appId: "1:648161412378:web:a48dfaa66ce896f5b098a3"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        console.log("ArabiKIDS Firebase Connected!");
+    </script>
+</body>
+</html>
